@@ -1,3 +1,3 @@
 #include "stdafx.h"
-#include "MyForm.h"
+#include "Form3.h"
 

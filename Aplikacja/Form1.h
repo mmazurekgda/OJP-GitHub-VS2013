@@ -1,5 +1,9 @@
 #pragma once
 
+#include "Form3.h"
+
+#include <iostream>
+#include <cstdio>
 namespace WindowsFormApplication1 {
 
 	using namespace System;
@@ -8,7 +12,7 @@ namespace WindowsFormApplication1 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+	using namespace System::IO;
 	/// <summary>
 	/// Summary for Form1
 	/// </summary>
@@ -34,24 +38,30 @@ namespace WindowsFormApplication1 {
 				delete components;
 			}
 		}
-
-
-
-
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::DataGridView^  dataGridView1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column2;
 	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::BindingNavigator^  bindingNavigator1;
-	private: System::Windows::Forms::ToolStripButton^  bindingNavigatorAddNewItem;
-	private: System::Windows::Forms::ToolStripLabel^  bindingNavigatorCountItem;
-	private: System::Windows::Forms::ToolStripButton^  bindingNavigatorDeleteItem;
-	private: System::Windows::Forms::ToolStripButton^  bindingNavigatorMoveFirstItem;
-	private: System::Windows::Forms::ToolStripButton^  bindingNavigatorMovePreviousItem;
-	private: System::Windows::Forms::ToolStripSeparator^  bindingNavigatorSeparator;
-	private: System::Windows::Forms::ToolStripTextBox^  bindingNavigatorPositionItem;
-	private: System::Windows::Forms::ToolStripSeparator^  bindingNavigatorSeparator1;
-	private: System::Windows::Forms::ToolStripButton^  bindingNavigatorMoveNextItem;
-	private: System::Windows::Forms::ToolStripButton^  bindingNavigatorMoveLastItem;
-	private: System::Windows::Forms::ToolStripSeparator^  bindingNavigatorSeparator2;
-	private: System::ComponentModel::IContainer^  components;
+	private: System::Windows::Forms::Button^  button2;
+
+	private: System::Windows::Forms::TextBox^  textBox1;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Button^  button3;
+
+	private: System::Windows::Forms::TextBox^  textBox2;
+
+	private: System::Windows::Forms::TextBox^  textBox3;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::CheckBox^  checkBox1;
+	private: System::Windows::Forms::CheckBox^  checkBox2;
+	private: System::Windows::Forms::CheckBox^  checkBox3;
+	private: System::Windows::Forms::Label^  label5;
+
+
+
+
 
 
 
@@ -66,7 +76,7 @@ namespace WindowsFormApplication1 {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-
+		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -75,170 +85,375 @@ namespace WindowsFormApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->bindingNavigator1 = (gcnew System::Windows::Forms::BindingNavigator(this->components));
-			this->bindingNavigatorAddNewItem = (gcnew System::Windows::Forms::ToolStripButton());
-			this->bindingNavigatorCountItem = (gcnew System::Windows::Forms::ToolStripLabel());
-			this->bindingNavigatorDeleteItem = (gcnew System::Windows::Forms::ToolStripButton());
-			this->bindingNavigatorMoveFirstItem = (gcnew System::Windows::Forms::ToolStripButton());
-			this->bindingNavigatorMovePreviousItem = (gcnew System::Windows::Forms::ToolStripButton());
-			this->bindingNavigatorSeparator = (gcnew System::Windows::Forms::ToolStripSeparator());
-			this->bindingNavigatorPositionItem = (gcnew System::Windows::Forms::ToolStripTextBox());
-			this->bindingNavigatorSeparator1 = (gcnew System::Windows::Forms::ToolStripSeparator());
-			this->bindingNavigatorMoveNextItem = (gcnew System::Windows::Forms::ToolStripButton());
-			this->bindingNavigatorMoveLastItem = (gcnew System::Windows::Forms::ToolStripButton());
-			this->bindingNavigatorSeparator2 = (gcnew System::Windows::Forms::ToolStripSeparator());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingNavigator1))->BeginInit();
-			this->bindingNavigator1->SuspendLayout();
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
+			// 
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->button1->Location = System::Drawing::Point(55, 516);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(222, 23);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"Utwórz plik .txt z danymi wyjœciowymi.";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
+				this->Column1,
+					this->Column2
+			});
+			this->dataGridView1->Location = System::Drawing::Point(28, 101);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(257, 409);
+			this->dataGridView1->TabIndex = 1;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"X";
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Y";
+			this->Column2->Name = L"Column2";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Aleo", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Aleo", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label1->Location = System::Drawing::Point(349, 17);
+			this->label1->Location = System::Drawing::Point(21, 29);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(561, 42);
+			this->label1->Size = System::Drawing::Size(644, 38);
 			this->label1->TabIndex = 2;
-			this->label1->Text = L"Metoda najmniejszych kwadratów";
+			this->label1->Text = L"Tworzenie wykresy przy pomocy Gnuplota.";
 			// 
-			// bindingNavigator1
+			// button2
 			// 
-			this->bindingNavigator1->AddNewItem = this->bindingNavigatorAddNewItem;
-			this->bindingNavigator1->CountItem = this->bindingNavigatorCountItem;
-			this->bindingNavigator1->DeleteItem = this->bindingNavigatorDeleteItem;
-			this->bindingNavigator1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(11) {
-				this->bindingNavigatorMoveFirstItem,
-					this->bindingNavigatorMovePreviousItem, this->bindingNavigatorSeparator, this->bindingNavigatorPositionItem, this->bindingNavigatorCountItem,
-					this->bindingNavigatorSeparator1, this->bindingNavigatorMoveNextItem, this->bindingNavigatorMoveLastItem, this->bindingNavigatorSeparator2,
-					this->bindingNavigatorAddNewItem, this->bindingNavigatorDeleteItem
-			});
-			this->bindingNavigator1->Location = System::Drawing::Point(0, 0);
-			this->bindingNavigator1->MoveFirstItem = this->bindingNavigatorMoveFirstItem;
-			this->bindingNavigator1->MoveLastItem = this->bindingNavigatorMoveLastItem;
-			this->bindingNavigator1->MoveNextItem = this->bindingNavigatorMoveNextItem;
-			this->bindingNavigator1->MovePreviousItem = this->bindingNavigatorMovePreviousItem;
-			this->bindingNavigator1->Name = L"bindingNavigator1";
-			this->bindingNavigator1->PositionItem = this->bindingNavigatorPositionItem;
-			this->bindingNavigator1->Size = System::Drawing::Size(1213, 25);
-			this->bindingNavigator1->TabIndex = 3;
-			this->bindingNavigator1->Text = L"bindingNavigator1";
+			this->button2->Font = (gcnew System::Drawing::Font(L"Aleo", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(311, 417);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(348, 93);
+			this->button2->TabIndex = 3;
+			this->button2->Text = L"Stwórz wykres!";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
 			// 
-			// bindingNavigatorAddNewItem
+			// textBox1
 			// 
-			this->bindingNavigatorAddNewItem->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->bindingNavigatorAddNewItem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bindingNavigatorAddNewItem.Image")));
-			this->bindingNavigatorAddNewItem->Name = L"bindingNavigatorAddNewItem";
-			this->bindingNavigatorAddNewItem->RightToLeftAutoMirrorImage = true;
-			this->bindingNavigatorAddNewItem->Size = System::Drawing::Size(23, 22);
-			this->bindingNavigatorAddNewItem->Text = L"Add new";
+			this->textBox1->Location = System::Drawing::Point(311, 138);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(131, 20);
+			this->textBox1->TabIndex = 5;
 			// 
-			// bindingNavigatorCountItem
+			// label2
 			// 
-			this->bindingNavigatorCountItem->Name = L"bindingNavigatorCountItem";
-			this->bindingNavigatorCountItem->Size = System::Drawing::Size(35, 22);
-			this->bindingNavigatorCountItem->Text = L"of {0}";
-			this->bindingNavigatorCountItem->ToolTipText = L"Total number of items";
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label2->Location = System::Drawing::Point(530, 138);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(9, 13);
+			this->label2->TabIndex = 6;
+			this->label2->Text = L" ";
 			// 
-			// bindingNavigatorDeleteItem
+			// button3
 			// 
-			this->bindingNavigatorDeleteItem->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->bindingNavigatorDeleteItem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bindingNavigatorDeleteItem.Image")));
-			this->bindingNavigatorDeleteItem->Name = L"bindingNavigatorDeleteItem";
-			this->bindingNavigatorDeleteItem->RightToLeftAutoMirrorImage = true;
-			this->bindingNavigatorDeleteItem->Size = System::Drawing::Size(23, 22);
-			this->bindingNavigatorDeleteItem->Text = L"Delete";
+			this->button3->Font = (gcnew System::Drawing::Font(L"Aleo", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->Location = System::Drawing::Point(452, 94);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(219, 38);
+			this->button3->TabIndex = 7;
+			this->button3->Text = L"Za³aduj ustawienia!";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
 			// 
-			// bindingNavigatorMoveFirstItem
+			// textBox2
 			// 
-			this->bindingNavigatorMoveFirstItem->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->bindingNavigatorMoveFirstItem->Name = L"bindingNavigatorMoveFirstItem";
-			this->bindingNavigatorMoveFirstItem->RightToLeftAutoMirrorImage = true;
-			this->bindingNavigatorMoveFirstItem->Size = System::Drawing::Size(23, 22);
-			this->bindingNavigatorMoveFirstItem->Text = L"Move first";
+			this->textBox2->Location = System::Drawing::Point(311, 187);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(131, 20);
+			this->textBox2->TabIndex = 9;
 			// 
-			// bindingNavigatorMovePreviousItem
+			// textBox3
 			// 
-			this->bindingNavigatorMovePreviousItem->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->bindingNavigatorMovePreviousItem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bindingNavigatorMovePreviousItem.Image")));
-			this->bindingNavigatorMovePreviousItem->Name = L"bindingNavigatorMovePreviousItem";
-			this->bindingNavigatorMovePreviousItem->RightToLeftAutoMirrorImage = true;
-			this->bindingNavigatorMovePreviousItem->Size = System::Drawing::Size(23, 22);
-			this->bindingNavigatorMovePreviousItem->Text = L"Move previous";
+			this->textBox3->Location = System::Drawing::Point(311, 236);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(131, 20);
+			this->textBox3->TabIndex = 11;
 			// 
-			// bindingNavigatorSeparator
+			// label3
 			// 
-			this->bindingNavigatorSeparator->Name = L"bindingNavigatorSeparator";
-			this->bindingNavigatorSeparator->Size = System::Drawing::Size(6, 25);
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label3->Location = System::Drawing::Point(530, 187);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(9, 13);
+			this->label3->TabIndex = 12;
+			this->label3->Text = L" ";
 			// 
-			// bindingNavigatorPositionItem
+			// label4
 			// 
-			this->bindingNavigatorPositionItem->AccessibleName = L"Position";
-			this->bindingNavigatorPositionItem->AutoSize = false;
-			this->bindingNavigatorPositionItem->Name = L"bindingNavigatorPositionItem";
-			this->bindingNavigatorPositionItem->Size = System::Drawing::Size(50, 23);
-			this->bindingNavigatorPositionItem->Text = L"0";
-			this->bindingNavigatorPositionItem->ToolTipText = L"Current position";
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label4->Location = System::Drawing::Point(530, 236);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(9, 13);
+			this->label4->TabIndex = 13;
+			this->label4->Text = L" ";
 			// 
-			// bindingNavigatorSeparator1
+			// checkBox1
 			// 
-			this->bindingNavigatorSeparator1->Name = L"bindingNavigatorSeparator1";
-			this->bindingNavigatorSeparator1->Size = System::Drawing::Size(6, 25);
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->checkBox1->Location = System::Drawing::Point(312, 116);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(100, 17);
+			this->checkBox1->TabIndex = 14;
+			this->checkBox1->Text = L"Tytu³ wykresu";
+			this->checkBox1->UseVisualStyleBackColor = true;
 			// 
-			// bindingNavigatorMoveNextItem
+			// checkBox2
 			// 
-			this->bindingNavigatorMoveNextItem->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->bindingNavigatorMoveNextItem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bindingNavigatorMoveNextItem.Image")));
-			this->bindingNavigatorMoveNextItem->Name = L"bindingNavigatorMoveNextItem";
-			this->bindingNavigatorMoveNextItem->RightToLeftAutoMirrorImage = true;
-			this->bindingNavigatorMoveNextItem->Size = System::Drawing::Size(23, 22);
-			this->bindingNavigatorMoveNextItem->Text = L"Move next";
+			this->checkBox2->AutoSize = true;
+			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->checkBox2->Location = System::Drawing::Point(313, 168);
+			this->checkBox2->Name = L"checkBox2";
+			this->checkBox2->Size = System::Drawing::Size(89, 17);
+			this->checkBox2->TabIndex = 15;
+			this->checkBox2->Text = L"Tytu³ Osi OY\r\n";
+			this->checkBox2->UseVisualStyleBackColor = true;
 			// 
-			// bindingNavigatorMoveLastItem
+			// checkBox3
 			// 
-			this->bindingNavigatorMoveLastItem->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->bindingNavigatorMoveLastItem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bindingNavigatorMoveLastItem.Image")));
-			this->bindingNavigatorMoveLastItem->Name = L"bindingNavigatorMoveLastItem";
-			this->bindingNavigatorMoveLastItem->RightToLeftAutoMirrorImage = true;
-			this->bindingNavigatorMoveLastItem->Size = System::Drawing::Size(23, 22);
-			this->bindingNavigatorMoveLastItem->Text = L"Move last";
+			this->checkBox3->AutoSize = true;
+			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->checkBox3->Location = System::Drawing::Point(314, 218);
+			this->checkBox3->Name = L"checkBox3";
+			this->checkBox3->Size = System::Drawing::Size(86, 17);
+			this->checkBox3->TabIndex = 16;
+			this->checkBox3->Text = L"Tytu³ osi OX";
+			this->checkBox3->UseVisualStyleBackColor = true;
 			// 
-			// bindingNavigatorSeparator2
+			// label5
 			// 
-			this->bindingNavigatorSeparator2->Name = L"bindingNavigatorSeparator2";
-			this->bindingNavigatorSeparator2->Size = System::Drawing::Size(6, 25);
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Aleo", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label5->Location = System::Drawing::Point(311, 282);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(302, 54);
+			this->label5->TabIndex = 17;
+			this->label5->Text = L"1. Zainstaluj Gnuplota w C:/gnuplot. \r\n2. Eksportuj wszystko do lokalizacji w któ"
+				L"rej \r\nznjaduje siê aplikacja.";
 			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(128)));
-			this->ClientSize = System::Drawing::Size(1213, 619);
-			this->Controls->Add(this->bindingNavigator1);
+			this->BackColor = System::Drawing::Color::DodgerBlue;
+			this->ClientSize = System::Drawing::Size(683, 560);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->checkBox3);
+			this->Controls->Add(this->checkBox2);
+			this->Controls->Add(this->checkBox1);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->button3);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->label1);
+			this->Controls->Add(this->dataGridView1);
+			this->Controls->Add(this->button1);
 			this->Name = L"Form1";
-			this->Text = L"Form1";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingNavigator1))->EndInit();
-			this->bindingNavigator1->ResumeLayout(false);
-			this->bindingNavigator1->PerformLayout();
+			this->Text = L"Eksport do Gnuplota";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void toolStripComboBox1_Click(System::Object^  sender, System::EventArgs^  e) {
+		
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+
+
+		Stream^ myStream;
+		SaveFileDialog^ saveFileDialog1 = gcnew SaveFileDialog;
+		saveFileDialog1->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+		saveFileDialog1->FilterIndex = 2;
+		saveFileDialog1->RestoreDirectory = true;
+		if (saveFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+		{
+
+
+			int col = 0, row = 0;
+
+
+			String^ linia;
+
+			col = Convert::ToInt32(dataGridView1->ColumnCount);
+			row = Convert::ToInt32(dataGridView1->RowCount);
+
+			StreamWriter^ plik = gcnew StreamWriter(saveFileDialog1->FileName, 0, System::Text::Encoding::Default);
+
+			for (row = 0; row<dataGridView1->RowCount; row++){
+
+				for (col = 0; col<dataGridView1->ColumnCount; col++) {
+					linia += Convert::ToString(dataGridView1->Rows[row]->Cells[col]->Value);
+
+					if (col<dataGridView1->ColumnCount) {
+						linia += "  ";
+					}
+				}
+				linia += System::Environment::NewLine;
+			}
+
+			plik->WriteLine(linia);
+			plik->Close();
+
+
+
+		}
+
+
+
 
 	}
-private: System::Void menuG³ówneToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+
+
+
+
+
+			 
+
+public: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+	
+
+	if (checkBox1->Checked){
+
+		label2->Text = textBox1->Text;
+
+	}
+
+	if (checkBox2->Checked){
+
+		label3->Text = textBox2->Text;
+
+	}
+
+	if (checkBox3->Checked){
+
+		label4->Text = textBox3->Text;
+
+	}
+
+	
+
 }
-private: System::Void menuStrip1_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
-}
-private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
-}
+
+	public: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+
+		
+		Stream^ myStream;
+		OpenFileDialog^ openFileDialog1 = gcnew OpenFileDialog;
+
+		openFileDialog1->InitialDirectory = "c:\\";
+		openFileDialog1->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+		openFileDialog1->FilterIndex = 2;
+		openFileDialog1->RestoreDirectory = true;
+
+		if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+		{
+			if ((myStream = openFileDialog1->OpenFile()) != nullptr)
+			{
+				String^ sciezka = System::IO::Path::GetDirectoryName(openFileDialog1->FileName);
+				String^ nazwapliku = System::IO::Path::GetFileName(openFileDialog1->FileName);
+
+			
+				
+		FILE* pipe = _popen("C:/gnuplot/bin/gnuplot.exe", "w");
+		if (pipe != NULL)
+		{
+			fprintf(pipe, "set term win\n");
+			fprintf(pipe, "set title \"%s\n", label2->Text, "\" \n");
+			fprintf(pipe, "set nokey\n");
+			fprintf(pipe, "set xlabel \"%s\n", label4->Text, "\" \n");
+			fprintf(pipe, "set ylabel \"%s\n", label3->Text, "\" \n");
+			fprintf(pipe, "cd \'%s\n", sciezka, "\' \n");
+			fprintf(pipe, "set style line 1 pt 1 linecolor 3 pointsize 3.0\n");
+			fprintf(pipe, "plot \"%s\n", nazwapliku, "\" using 1:2 ls 1\n");
+			fprintf(pipe, "set term png enhanced transparent \n");
+			fprintf(pipe, "set output \"Wykres.png\"\n");
+			fprintf(pipe, "replot\n");
+			fprintf(pipe, "set term win\n");
+			fflush(pipe);
+		}
+		else puts("Could not open the file\n");
+		_pclose(pipe);
+		
+
+	
+
+
+				
+				myStream->Close();
+
+
+				
+				Aplikacja::Form3^ noweOkno = gcnew Aplikacja::Form3;
+				noweOkno->ShowDialog();
+
+			}
+
+
+
+		}
+	}
+
+
+		
+			
+			
+			
+		
+	
+
+
+
+
 
 };
 }

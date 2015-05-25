@@ -2,6 +2,9 @@
 
 #include "stdafx.h"
 #include "Form1.h"
+#include "Form3.h"
+
+
 
 using namespace WindowsFormApplication1;
 
