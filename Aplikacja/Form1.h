@@ -69,7 +69,7 @@ namespace WindowsFormApplication1 {
 			series1->Legend = L"Legend1";
 			series1->Name = L"Series1";
 			this->chart1->Series->Add(series1);
-			this->chart1->Size = System::Drawing::Size(393, 211);
+			this->chart1->Size = System::Drawing::Size(307, 168);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
 			// 
