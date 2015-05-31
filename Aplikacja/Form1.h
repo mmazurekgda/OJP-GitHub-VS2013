@@ -58,6 +58,13 @@ namespace WindowsFormApplication1 {
 	private: System::Windows::Forms::CheckBox^  checkBox2;
 	private: System::Windows::Forms::CheckBox^  checkBox3;
 	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::CheckBox^  checkBox4;
+	private: System::Windows::Forms::TextBox^  textBox4;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::TextBox^  textBox5;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::Label^  teksty;
+
 
 
 
@@ -102,6 +109,12 @@ namespace WindowsFormApplication1 {
 			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->checkBox4 = (gcnew System::Windows::Forms::CheckBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->teksty = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -143,13 +156,14 @@ namespace WindowsFormApplication1 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Aleo", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->label1->Location = System::Drawing::Point(21, 29);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::Yellow;
+			this->label1->Location = System::Drawing::Point(177, 26);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(644, 38);
+			this->label1->Size = System::Drawing::Size(445, 39);
 			this->label1->TabIndex = 2;
-			this->label1->Text = L"Tworzenie wykresy przy pomocy Gnuplota.";
+			this->label1->Text = L"Szybki wykres w Gnuplocie!";
 			// 
 			// button2
 			// 
@@ -157,7 +171,7 @@ namespace WindowsFormApplication1 {
 				static_cast<System::Byte>(0)));
 			this->button2->Location = System::Drawing::Point(311, 417);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(348, 93);
+			this->button2->Size = System::Drawing::Size(498, 93);
 			this->button2->TabIndex = 3;
 			this->button2->Text = L"Stwórz wykres!";
 			this->button2->UseVisualStyleBackColor = true;
@@ -175,7 +189,7 @@ namespace WindowsFormApplication1 {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label2->Location = System::Drawing::Point(530, 138);
+			this->label2->Location = System::Drawing::Point(448, 141);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(9, 13);
 			this->label2->TabIndex = 6;
@@ -185,7 +199,7 @@ namespace WindowsFormApplication1 {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Aleo", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(452, 94);
+			this->button3->Location = System::Drawing::Point(420, 338);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(219, 38);
 			this->button3->TabIndex = 7;
@@ -212,7 +226,7 @@ namespace WindowsFormApplication1 {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label3->Location = System::Drawing::Point(530, 187);
+			this->label3->Location = System::Drawing::Point(448, 190);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(9, 13);
 			this->label3->TabIndex = 12;
@@ -223,7 +237,7 @@ namespace WindowsFormApplication1 {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label4->Location = System::Drawing::Point(530, 236);
+			this->label4->Location = System::Drawing::Point(448, 239);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(9, 13);
 			this->label4->TabIndex = 13;
@@ -232,11 +246,12 @@ namespace WindowsFormApplication1 {
 			// checkBox1
 			// 
 			this->checkBox1->AutoSize = true;
-			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->checkBox1->ForeColor = System::Drawing::Color::Yellow;
 			this->checkBox1->Location = System::Drawing::Point(312, 116);
 			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(100, 17);
+			this->checkBox1->Size = System::Drawing::Size(100, 19);
 			this->checkBox1->TabIndex = 14;
 			this->checkBox1->Text = L"Tytu³ wykresu";
 			this->checkBox1->UseVisualStyleBackColor = true;
@@ -244,11 +259,12 @@ namespace WindowsFormApplication1 {
 			// checkBox2
 			// 
 			this->checkBox2->AutoSize = true;
-			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->checkBox2->ForeColor = System::Drawing::Color::Yellow;
 			this->checkBox2->Location = System::Drawing::Point(313, 168);
 			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(89, 17);
+			this->checkBox2->Size = System::Drawing::Size(93, 19);
 			this->checkBox2->TabIndex = 15;
 			this->checkBox2->Text = L"Tytu³ Osi OY\r\n";
 			this->checkBox2->UseVisualStyleBackColor = true;
@@ -256,11 +272,12 @@ namespace WindowsFormApplication1 {
 			// checkBox3
 			// 
 			this->checkBox3->AutoSize = true;
-			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Aleo", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->checkBox3->ForeColor = System::Drawing::Color::Yellow;
 			this->checkBox3->Location = System::Drawing::Point(314, 218);
 			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(86, 17);
+			this->checkBox3->Size = System::Drawing::Size(91, 19);
 			this->checkBox3->TabIndex = 16;
 			this->checkBox3->Text = L"Tytu³ osi OX";
 			this->checkBox3->UseVisualStyleBackColor = true;
@@ -268,21 +285,85 @@ namespace WindowsFormApplication1 {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Aleo", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label5->Location = System::Drawing::Point(311, 282);
+			this->label5->ForeColor = System::Drawing::Color::Yellow;
+			this->label5->Location = System::Drawing::Point(291, 305);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(302, 54);
+			this->label5->Size = System::Drawing::Size(0, 18);
 			this->label5->TabIndex = 17;
-			this->label5->Text = L"1. Zainstaluj Gnuplota w C:/gnuplot. \r\n2. Eksportuj wszystko do lokalizacji w któ"
-				L"rej \r\nznjaduje siê aplikacja.";
+			// 
+			// checkBox4
+			// 
+			this->checkBox4->AutoSize = true;
+			this->checkBox4->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->checkBox4->ForeColor = System::Drawing::Color::Yellow;
+			this->checkBox4->Location = System::Drawing::Point(578, 113);
+			this->checkBox4->Name = L"checkBox4";
+			this->checkBox4->Size = System::Drawing::Size(150, 19);
+			this->checkBox4->TabIndex = 18;
+			this->checkBox4->Text = L"Aproksymacja funkcj¹\?";
+			this->checkBox4->UseVisualStyleBackColor = true;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(578, 135);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(201, 20);
+			this->textBox4->TabIndex = 19;
+			this->textBox4->Text = L"funkcja postaci np. \"A*x+B\"";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(673, 218);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(10, 13);
+			this->label6->TabIndex = 20;
+			this->label6->Text = L" ";
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(578, 180);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(201, 20);
+			this->textBox5->TabIndex = 21;
+			this->textBox5->Text = L"parametry postaci \"A, B,...\"\r\n";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(673, 267);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(10, 13);
+			this->label7->TabIndex = 22;
+			this->label7->Text = L" ";
+			// 
+			// teksty
+			// 
+			this->teksty->AutoSize = true;
+			this->teksty->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->teksty->ForeColor = System::Drawing::Color::Yellow;
+			this->teksty->Location = System::Drawing::Point(290, 285);
+			this->teksty->Name = L"teksty";
+			this->teksty->Size = System::Drawing::Size(0, 20);
+			this->teksty->TabIndex = 23;
+			this->teksty->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::DodgerBlue;
-			this->ClientSize = System::Drawing::Size(683, 560);
+			this->ClientSize = System::Drawing::Size(835, 560);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->textBox5);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->textBox4);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->checkBox4);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->checkBox3);
 			this->Controls->Add(this->checkBox2);
@@ -294,10 +375,10 @@ namespace WindowsFormApplication1 {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->button2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button1);
+			this->Controls->Add(this->teksty);
 			this->Name = L"Form1";
 			this->Text = L"Eksport do Gnuplota";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -380,7 +461,13 @@ public: System::Void button3_Click(System::Object^  sender, System::EventArgs^  
 
 	}
 
-	
+	if (checkBox4->Checked){
+
+		label6->Text = textBox4->Text;
+		label7->Text = textBox5->Text;
+	}
+
+
 
 }
 
@@ -401,28 +488,58 @@ public: System::Void button3_Click(System::Object^  sender, System::EventArgs^  
 			{
 				String^ sciezka = System::IO::Path::GetDirectoryName(openFileDialog1->FileName);
 				String^ nazwapliku = System::IO::Path::GetFileName(openFileDialog1->FileName);
+				String^ regresja;
+			
+				if (checkBox4->Checked){
 
+
+
+					regresja = "\, f(x) ls 2";
+					
+				}
+				else{
+					regresja = " ";
+				}
+				
 			
 				
 		FILE* pipe = _popen("C:/gnuplot/bin/gnuplot.exe", "w");
 		if (pipe != NULL)
 		{
+			fprintf(pipe, "reset\n");
 			fprintf(pipe, "set term win\n");
 			fprintf(pipe, "set title \"%s\n", label2->Text, "\" \n");
 			fprintf(pipe, "set nokey\n");
 			fprintf(pipe, "set xlabel \"%s\n", label4->Text, "\" \n");
 			fprintf(pipe, "set ylabel \"%s\n", label3->Text, "\" \n");
 			fprintf(pipe, "cd \'%s\n", sciezka, "\' \n");
-			fprintf(pipe, "set style line 1 pt 1 linecolor 3 pointsize 3.0\n");
-			fprintf(pipe, "plot \"%s\n", nazwapliku, "\" using 1:2 ls 1\n");
-			fprintf(pipe, "set term png enhanced transparent \n");
+			fprintf(pipe, "A=1\n");
+			fprintf(pipe, "B=1\n");
+			fprintf(pipe, "C=1\n");
+			fprintf(pipe, "D=1\n");
+			fprintf(pipe, "E=1\n");
+			fprintf(pipe, "F=1\n");
+			fprintf(pipe, "G=1\n");
+			fprintf(pipe, "H=1\n");
+			if (checkBox4->Checked){
+				fprintf(pipe, "f(x)=%s\n", label6->Text, "\n");
+				fprintf(pipe, "fit f(x) \"%s\" using 1:2 via %s\n", nazwapliku,  label7->Text, "\n");
+			}
+			fprintf(pipe, "set style line 1 dashtype 3 linecolor 3.0 pointsize 3.0\n");
+			fprintf(pipe, "set style line 2 linecolor 4.0 pointsize 3.0\n");
+			fprintf(pipe, "plot \"%s\" using 1:2 ls 1 %s\n", nazwapliku, regresja, "\n");
+			fprintf(pipe, "set terminal postscript color enhanced \"Helvetica, 15\"\n");
+			fprintf(pipe, "set output \"Wykres.eps\"\n");
+			fprintf(pipe, "replot\n");
+			fprintf(pipe, "set term win\n");
+			fprintf(pipe, "set terminal png enhanced \"Helvetica, 15\"\n");
 			fprintf(pipe, "set output \"Wykres.png\"\n");
 			fprintf(pipe, "replot\n");
 			fprintf(pipe, "set term win\n");
 			fflush(pipe);
 		}
 		else puts("Could not open the file\n");
-		_pclose(pipe);
+		//_pclose(pipe);
 		
 
 	
