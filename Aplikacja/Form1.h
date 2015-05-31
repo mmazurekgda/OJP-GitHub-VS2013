@@ -317,7 +317,7 @@ namespace WindowsFormApplication1 {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(673, 218);
+			this->label6->Location = System::Drawing::Point(575, 220);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(10, 13);
 			this->label6->TabIndex = 20;
@@ -334,7 +334,7 @@ namespace WindowsFormApplication1 {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(673, 267);
+			this->label7->Location = System::Drawing::Point(575, 269);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(10, 13);
 			this->label7->TabIndex = 22;
@@ -539,7 +539,7 @@ public: System::Void button3_Click(System::Object^  sender, System::EventArgs^  
 			fflush(pipe);
 		}
 		else puts("Could not open the file\n");
-		//_pclose(pipe);
+		_pclose(pipe);
 		
 
 	
